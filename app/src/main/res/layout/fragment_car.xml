@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/clInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvRegistrationNumberLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Registration Number:"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvVINLabel"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tvVINLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="20dp"
+            android:text="VIN:"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvBrandLabel"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tvRegistrationNumberLabel" />
+
+        <TextView
+            android:id="@+id/tvBrandLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Brand:"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvYearLabel"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tvVINLabel" />
+
+        <TextView
+            android:id="@+id/tvYearLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Year:"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvGearBoxLabel"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tvBrandLabel" />
+
+        <TextView
+            android:id="@+id/tvGearBoxLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Gear box:"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvFuelLabel"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tvYearLabel" />
+
+        <TextView
+            android:id="@+id/tvFuelLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Fuel:"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvConsumptionUrbanLabel"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tvGearBoxLabel" />
+
+        <TextView
+            android:id="@+id/tvConsumptionUrbanLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Urban Consumption:"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvConsumptionRuralLabel"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tvFuelLabel" />
+
+        <TextView
+            android:id="@+id/tvConsumptionRuralLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Rural Consumption:"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvConsumptionMixedLabel"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tvConsumptionUrbanLabel" />
+
+        <TextView
+            android:id="@+id/tvConsumptionMixedLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="20dp"
+            android:text="Mixed Consumption:"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tvCO2EmissionLabel"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tvConsumptionRuralLabel" />
+
+        <TextView
+            android:id="@+id/tvCO2EmissionLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="20dp"
+            android:text="CO2 Emission:"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tvConsumptionMixedLabel" />
+
+        <TextView
+            android:id="@+id/tvRegistrationNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/tvRegistrationNumberLabel"
+            tools:text="Registration Number" />
+
+        <TextView
+            android:id="@+id/tvVIN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/tvVINLabel"
+            tools:text="VIN" />
+
+        <TextView
+            android:id="@+id/tvBrand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/tvBrandLabel"
+            tools:text="Brand" />
+
+        <TextView
+            android:id="@+id/tvYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/tvYearLabel"
+            tools:text="Year" />
+
+        <TextView
+            android:id="@+id/tvGearBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/tvGearBoxLabel"
+            tools:text="Gear Box" />
+
+        <TextView
+            android:id="@+id/tvFuel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/tvFuelLabel"
+            tools:text="Fuel" />
+
+        <TextView
+            android:id="@+id/tvConsumptionUrban"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="4dp"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/tvConsumptionUrbanLabel"
+            tools:text="Consumption Urbar" />
+
+        <TextView
+            android:id="@+id/tvConsumptionRural"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/tvConsumptionRuralLabel"
+            tools:text="Consumption Rural" />
+
+        <TextView
+            android:id="@+id/tvConsumptionMixed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/tvConsumptionMixedLabel"
+            tools:text="Consumption Mixed" />
+
+        <TextView
+            android:id="@+id/tvCO2Emission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/tvCO2EmissionLabel"
+            tools:text="CO2 Emission" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Network error"
+        android:visibility="gone"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
