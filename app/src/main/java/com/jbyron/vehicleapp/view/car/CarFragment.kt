@@ -6,10 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import com.jbyron.vehicleapp.App
 import com.jbyron.vehicleapp.R
+import com.jbyron.vehicleapp.constant.NetworkState
 import com.jbyron.vehicleapp.view.BaseFragment
 import com.jbyron.vehicleapp.viewmodel.CarViewModel
 import io.reactivex.Observable
+import io.reactivex.android.schedulers.AndroidSchedulers
 import kotlinx.android.synthetic.main.fragment_car.*
+import timber.log.Timber
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
@@ -36,6 +39,7 @@ class CarFragment : BaseFragment() {
         val doubleFormat = "%.6f"
         disposables.addAll(
             carViewModel.car.subscribe {
+                Timber.i("Success")
                 tvRegistrationNumber.text = it.regno.toUpperCase()
                 tvVIN.text = it.vin.toUpperCase()
                 tvBrand.text = it.brand.capitalize()
@@ -46,6 +50,30 @@ class CarFragment : BaseFragment() {
                 tvConsumptionRural.text = doubleFormat.format(it.fuel.gasoline.averageConsumption.rural)
                 tvConsumptionMixed.text = doubleFormat.format(it.fuel.gasoline.averageConsumption.mixed)
                 tvCO2Emission.text = doubleFormat.format(it.emission.gasoline.co2.mixed)
+
+                tvError.visibility = View.GONE
+                pbLoading.visibility = View.GONE
+                clInfo.visibility = View.VISIBLE
+            },
+
+            carViewModel.state.subscribe {
+                when (it) {
+                    NetworkState.ERROR -> {
+                        Timber.i("NetworkState ERROR")
+                        tvError.visibility = View.VISIBLE
+                        pbLoading.visibility = View.GONE
+                        clInfo.visibility = View.GONE
+                        Observable.timer(5, TimeUnit.SECONDS)
+                            .observeOn(AndroidSchedulers.mainThread())
+                            .subscribe { loadCarData() }
+                    }
+                    NetworkState.LOADING -> {
+                        Timber.i("NetworkState LOADING")
+                        tvError.visibility = View.GONE
+                        pbLoading.visibility = View.VISIBLE
+                        clInfo.visibility = View.GONE
+                    }
+                }
             }
         )
     }
@@ -56,13 +84,8 @@ class CarFragment : BaseFragment() {
 
     private fun loadCarData() {
         disposables.add(
-            carViewModel.getCar().subscribe({
-                tvError.visibility = View.GONE
-                clInfo.visibility = View.VISIBLE
-            }, {
-                tvError.visibility = View.VISIBLE
-                clInfo.visibility = View.GONE
-                Observable.timer(5, TimeUnit.SECONDS).subscribe { loadCarData() }
+            carViewModel.getCar().subscribe({}, {
+                Timber.e(it)
             })
         )
     }
