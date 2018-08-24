@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -18,12 +19,12 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             android:layout_marginTop="20dp"
-            android:text="Registration Number:"
+            android:text="@string/car_registration_number_label"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tvVINLabel"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
+            app:layout_constraintVertical_chainStyle="packed"/>
 
         <TextView
             android:id="@+id/tvVINLabel"
@@ -31,11 +32,11 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             android:layout_marginTop="20dp"
-            android:text="VIN:"
+            android:text="@string/car_vin_label"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tvBrandLabel"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/tvRegistrationNumberLabel" />
+            app:layout_constraintTop_toBottomOf="@+id/tvRegistrationNumberLabel"/>
 
         <TextView
             android:id="@+id/tvBrandLabel"
@@ -43,11 +44,11 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             android:layout_marginTop="20dp"
-            android:text="Brand:"
+            android:text="@string/car_brand_label"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tvYearLabel"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/tvVINLabel" />
+            app:layout_constraintTop_toBottomOf="@+id/tvVINLabel"/>
 
         <TextView
             android:id="@+id/tvYearLabel"
@@ -55,11 +56,11 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             android:layout_marginTop="20dp"
-            android:text="Year:"
+            android:text="@string/car_year_label"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tvGearBoxLabel"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/tvBrandLabel" />
+            app:layout_constraintTop_toBottomOf="@+id/tvBrandLabel"/>
 
         <TextView
             android:id="@+id/tvGearBoxLabel"
@@ -67,11 +68,11 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             android:layout_marginTop="20dp"
-            android:text="Gear box:"
+            android:text="@string/car_gear_box_label"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tvFuelLabel"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/tvYearLabel" />
+            app:layout_constraintTop_toBottomOf="@+id/tvYearLabel"/>
 
         <TextView
             android:id="@+id/tvFuelLabel"
@@ -79,11 +80,11 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             android:layout_marginTop="20dp"
-            android:text="Fuel:"
+            android:text="@string/car_fuel_label"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tvConsumptionUrbanLabel"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/tvGearBoxLabel" />
+            app:layout_constraintTop_toBottomOf="@+id/tvGearBoxLabel"/>
 
         <TextView
             android:id="@+id/tvConsumptionUrbanLabel"
@@ -91,11 +92,11 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             android:layout_marginTop="20dp"
-            android:text="Urban Consumption:"
+            android:text="@string/car_urban_consumption_label"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tvConsumptionRuralLabel"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/tvFuelLabel" />
+            app:layout_constraintTop_toBottomOf="@+id/tvFuelLabel"/>
 
         <TextView
             android:id="@+id/tvConsumptionRuralLabel"
@@ -103,11 +104,11 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             android:layout_marginTop="20dp"
-            android:text="Rural Consumption:"
+            android:text="@string/car_rural_consumption_label"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tvConsumptionMixedLabel"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/tvConsumptionUrbanLabel" />
+            app:layout_constraintTop_toBottomOf="@+id/tvConsumptionUrbanLabel"/>
 
         <TextView
             android:id="@+id/tvConsumptionMixedLabel"
@@ -115,11 +116,11 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             android:layout_marginTop="20dp"
-            android:text="Mixed Consumption:"
+            android:text="@string/car_mixed_consumption_label"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/tvCO2EmissionLabel"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/tvConsumptionRuralLabel" />
+            app:layout_constraintTop_toBottomOf="@+id/tvConsumptionRuralLabel"/>
 
         <TextView
             android:id="@+id/tvCO2EmissionLabel"
@@ -128,11 +129,11 @@
             android:layout_marginBottom="20dp"
             android:layout_marginEnd="5dp"
             android:layout_marginTop="20dp"
-            android:text="CO2 Emission:"
+            android:text="@string/car_co2_emission_label"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/tvConsumptionMixedLabel" />
+            app:layout_constraintTop_toBottomOf="@+id/tvConsumptionMixedLabel"/>
 
         <TextView
             android:id="@+id/tvRegistrationNumber"
@@ -142,7 +143,7 @@
             android:text=""
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="@+id/tvRegistrationNumberLabel"
-            tools:text="Registration Number" />
+            tools:text="Registration Number"/>
 
         <TextView
             android:id="@+id/tvVIN"
@@ -152,7 +153,7 @@
             android:text=""
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="@+id/tvVINLabel"
-            tools:text="VIN" />
+            tools:text="VIN"/>
 
         <TextView
             android:id="@+id/tvBrand"
@@ -162,7 +163,7 @@
             android:text=""
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="@+id/tvBrandLabel"
-            tools:text="Brand" />
+            tools:text="Brand"/>
 
         <TextView
             android:id="@+id/tvYear"
@@ -172,7 +173,7 @@
             android:text=""
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="@+id/tvYearLabel"
-            tools:text="Year" />
+            tools:text="Year"/>
 
         <TextView
             android:id="@+id/tvGearBox"
@@ -182,7 +183,7 @@
             android:text=""
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="@+id/tvGearBoxLabel"
-            tools:text="Gear Box" />
+            tools:text="Gear Box"/>
 
         <TextView
             android:id="@+id/tvFuel"
@@ -192,7 +193,7 @@
             android:text=""
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="@+id/tvFuelLabel"
-            tools:text="Fuel" />
+            tools:text="Fuel"/>
 
         <TextView
             android:id="@+id/tvConsumptionUrban"
@@ -203,7 +204,7 @@
             android:text=""
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="@+id/tvConsumptionUrbanLabel"
-            tools:text="Consumption Urbar" />
+            tools:text="Consumption Urbar"/>
 
         <TextView
             android:id="@+id/tvConsumptionRural"
@@ -213,7 +214,7 @@
             android:text=""
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="@+id/tvConsumptionRuralLabel"
-            tools:text="Consumption Rural" />
+            tools:text="Consumption Rural"/>
 
         <TextView
             android:id="@+id/tvConsumptionMixed"
@@ -223,7 +224,7 @@
             android:text=""
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="@+id/tvConsumptionMixedLabel"
-            tools:text="Consumption Mixed" />
+            tools:text="Consumption Mixed"/>
 
         <TextView
             android:id="@+id/tvCO2Emission"
@@ -233,14 +234,14 @@
             android:text=""
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="@+id/tvCO2EmissionLabel"
-            tools:text="CO2 Emission" />
+            tools:text="CO2 Emission"/>
 
         <android.support.constraint.Guideline
             android:id="@+id/guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.5" />
+            app:layout_constraintGuide_percent="0.5"/>
 
     </android.support.constraint.ConstraintLayout>
 
@@ -248,12 +249,23 @@
         android:id="@+id/tvError"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Network error"
-        android:visibility="gone"
+        android:text="@string/car_retry"
         android:textColor="@android:color/holo_red_dark"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>
