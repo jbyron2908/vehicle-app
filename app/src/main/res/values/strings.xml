@@ -1,3 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
     <string name="app_name">Vehicle App</string>
+
+    <string name="car_brand_label">Brand:</string>
+    <string name="car_co2_emission_label">CO2 Emission:</string>
+    <string name="car_fuel_label">Fuel:</string>
+    <string name="car_gear_box_label">Gear box:</string>
+    <string name="car_mixed_consumption_label">Mixed Consumption:</string>
+    <string name="car_registration_number_label">Registration Number:</string>
+    <string name="car_retry">Network error\nRetry in 5 sec</string>
+    <string name="car_rural_consumption_label">Rural Consumption:</string>
+    <string name="car_urban_consumption_label">Urban Consumption:</string>
+    <string name="car_vin_label">VIN:</string>
+    <string name="car_year_label">Year:</string>
+
+    <string name="leave_message">Are you sure do you want to quit the app?</string>
+    <string name="leave_no">No</string>
+    <string name="leave_yes">Yes</string>
 </resources>
